@@ -220,10 +220,6 @@ ul {
     position: relative;
     padding-top: var(--header-height);
     overflow: hidden;
-    background: linear-gradient(to right, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.4) 100%), url('hero_bg.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .hero-content {
@@ -846,6 +842,7 @@ ul {
         grid-template-columns: 1fr;
     }
 }
+
 /* AI Chatbot Widget Styles */
 .ai-chatbot-widget {
     position: fixed;
