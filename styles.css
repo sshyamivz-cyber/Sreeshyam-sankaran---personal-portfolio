@@ -288,24 +288,24 @@ ul {
 .shape {
     position: absolute;
     border-radius: 50%;
-    filter: blur(150px);
-    opacity: 0.25;
+    filter: blur(100px);
+    opacity: 0.3;
 }
 
 .shape-1 {
-    top: 5%;
-    right: 0%;
-    width: 800px;
-    height: 800px;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
     background: var(--accent-color);
     animation: float 20s infinite alternate;
 }
 
 .shape-2 {
     bottom: -10%;
-    left: -20%;
-    width: 800px;
-    height: 800px;
+    left: -10%;
+    width: 500px;
+    height: 500px;
     background: var(--accent-flow);
     animation: float 15s infinite alternate-reverse;
 }
