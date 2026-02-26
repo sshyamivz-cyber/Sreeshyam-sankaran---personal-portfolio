@@ -480,6 +480,41 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot Widget -->
+    <div class="ai-chatbot-widget">
+        <button id="chatbot-toggle" class="chatbot-toggle-btn" aria-label="Open AI Assistant">
+            <i data-feather="message-square"></i>
+        </button>
+        <div id="chatbot-container" class="chatbot-container hidden">
+            <div class="chatbot-header">
+                <div>
+                    <h4>MetaHire AI Assistant</h4>
+                    <span class="chatbot-status">Online</span>
+                </div>
+                <button id="chatbot-close" class="chatbot-close-btn" aria-label="Close UI">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="message ai-message">
+                    <div class="message-content">
+                        Hello! 👋 I'm an AI Technology Consultant for MetaHire Solutions. I can help you with CRM
+                        development, Web & Mobile Apps, automation, or rescuing an ongoing project. How can I assist you
+                        today?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Type your message..." aria-label="Chat message">
+                <button id="chatbot-send" class="chatbot-send-btn" aria-label="Send Message">
+                    <i data-feather="send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
     <script>
         feather.replace()
