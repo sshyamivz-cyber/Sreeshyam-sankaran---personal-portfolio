@@ -620,12 +620,23 @@ ul {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s ease;
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Floating Micro-Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
 }
 
 /* Responsive */
@@ -702,16 +713,19 @@ ul {
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition-medium);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
+    /* 3D tilt prep */
+    will-change: transform;
+    transform-style: preserve-3d;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(0, 242, 234, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(0, 242, 234, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 234, 0.05);
 }
 
 .project-image {
@@ -826,13 +840,17 @@ ul {
     padding: 2.5rem;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition-medium);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+    /* 3D tilt prep */
+    will-change: transform;
+    transform-style: preserve-3d;
 }
 
 .service-card:hover {
     background: rgba(255, 255, 255, 0.04);
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(0, 242, 234, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 242, 234, 0.08);
 }
 
 .service-icon {
@@ -846,6 +864,10 @@ ul {
     color: var(--accent-color);
     margin-bottom: 1.5rem;
     transition: var(--transition-fast);
+}
+
+.service-icon i {
+    animation: float 4s ease-in-out infinite;
 }
 
 .service-card:hover .service-icon {
