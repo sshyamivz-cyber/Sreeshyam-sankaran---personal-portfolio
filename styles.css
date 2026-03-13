@@ -798,6 +798,23 @@ ul {
 }
 
 /* Services Section Styles */
+.service-category {
+    margin-bottom: 5rem;
+}
+
+.service-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-heading {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+    display: inline-block;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
