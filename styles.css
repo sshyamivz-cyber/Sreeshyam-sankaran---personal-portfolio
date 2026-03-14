@@ -1146,18 +1146,31 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #25D366;
+    background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
-    animation: float 4s ease-in-out infinite;
+    box-shadow: 
+        0 6px 0 #075E54, 
+        0 15px 20px rgba(0, 0, 0, 0.4), 
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .whatsapp-widget:hover {
-    transform: scale(1.1) translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 0 #075E54, 
+        0 20px 25px rgba(0, 0, 0, 0.5),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5);
     color: white;
+}
+
+.whatsapp-widget:active {
+    transform: translateY(4px);
+    box-shadow: 
+        0 2px 0 #075E54, 
+        0 5px 10px rgba(0, 0, 0, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.2);
 }
