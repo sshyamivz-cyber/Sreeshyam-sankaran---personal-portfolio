@@ -1151,8 +1151,8 @@ ul {
     border-color: var(--primary-color, #2563eb);
 }
 
-/* WhatsApp Widget Styles */
-.whatsapp-widget {
+/* Chat Widget Styles */
+.floating-chat-btn {
     position: fixed;
     bottom: 30px;
     left: 30px;
@@ -1171,7 +1171,7 @@ ul {
     transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.whatsapp-widget:hover {
+.floating-chat-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
         0 6px 0 #1da851, 
@@ -1180,7 +1180,7 @@ ul {
     color: white;
 }
 
-.whatsapp-widget:active {
+.floating-chat-btn:active {
     transform: translateY(4px);
     box-shadow: 
         0 0 0 #1da851, 
